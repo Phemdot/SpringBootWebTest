@@ -17,6 +17,7 @@
 		<java.version>11</java.version>
 		<webdrivermanager.version>5.3.0</webdrivermanager.version>
 		<testng.version>7.5.1</testng.version>
+		<cucumber.version>7.10.1</cucumber.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -55,6 +56,27 @@
 			<version>24.0.1</version>
 			<scope>compile</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-spring</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+
+
 	</dependencies>
 
 	<build>
@@ -70,7 +92,7 @@
 				<version>2.22.2</version>
 				<configuration>
 					<includes>
-						<include>com.sba.SpringBootAuto.SpringTestNGTest</include>
+						<include>com.sba.SpringBootAuto.runner.TestRunner</include>
 					</includes>
 				</configuration>
 			</plugin>

@@ -20,6 +20,9 @@ public class HomePage extends BasePage{
     @FindBy(how = How.LINK_TEXT, using = "Employee List")
     public WebElement lnkEmployeeList;
 
+    @FindBy(how = How.LINK_TEXT, using = "Employee Details")
+    public WebElement lnkEmployeeDetails;
+
     public LoginPage clickLogin(){
 
         lnkLogin.click();
@@ -29,5 +32,9 @@ public class HomePage extends BasePage{
     public void clickEmployeeList(){
         lnkEmployeeList.click();
         //return new LoginPage();
+    }
+
+    public boolean isEmployeeDetailsExist(){
+        return lnkEmployeeDetails.isDisplayed();
     }
 }
